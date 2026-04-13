@@ -29,8 +29,8 @@ while running:
 
     img2=pygame.image.load("backgroundtwo.jpg")
     image2=pygame.transform.scale(img2, (WIDTH, HEIGHT))
-    font2=pygame.font.SysFont("Arial", 38)
-    text2=font2.render("MAY ALL YOUR WISHES COME TRUE!", True, ("#AA9FB1"))
+    font2=pygame.font.SysFont("Arial", 30)
+    text2=font2.render("MAY ALL YOUR WISHES COME TRUE!", True, ("#32064E"))
     text2_rect=text2.get_rect(center=(CENTER_X, CENTER_Y-50))
     screen.fill("white")
     screen.blit(image2, (0,0))
@@ -39,6 +39,20 @@ while running:
     time.sleep(3)
 
 
-    
+    img3=pygame.image.load("backgroundthree.jpg")
+    image3=pygame.transform.scale(img3, (WIDTH, HEIGHT))
+    font3=pygame.font.SysFont("Nunito", 38)
+    text3=font3.render("HAVE A WONDERFUL BIRTHDAY!", True, ("purple"))
+    text3_rect=text3.get_rect(center=(CENTER_X, CENTER_Y-50))
+    screen.fill("white")
+    screen.blit(image3, (0,0))
+    screen.blit(text3, text3_rect)
+    pygame.display.update()
+    time.sleep(3)
+
+    for event in pygame.event.get():
+        if event.type==pygame.QUIT:
+            running=False
+            pygame.quit()
 
 pygame.quit()
